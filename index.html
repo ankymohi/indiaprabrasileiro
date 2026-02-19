@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiros Índia — Passagem Real · Diwali 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Phosphor Icons (real SVG icon library) -->
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+<style>
+/* ─── RESET & BASE ─── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'Jost', sans-serif;
+  background:#0C0700;
+  color:#F5EDD8;
+  overflow-x:hidden;
+  line-height:1.7;
+}
+img { display:block; max-width:100%; }
+a { text-decoration:none; color:inherit; }
+
+/* ─── COLOUR TOKENS ─── */
+:root {
+  --saffron: #E8520A;
+  --saffron2: #F27030;
+  --gold:    #C9930A;
+  --gold2:   #E8B740;
+  --cream:   #F5EDD8;
+  --muted:   rgba(245,237,216,.65);
+  --ink:     #0C0700;
+  --ink2:    #1A0E00;
+  --border:  rgba(201,147,10,.22);
+}
+
+/* ─── TYPOGRAPHY ─── */
+.serif        { font-family:'Cormorant Garamond', Georgia, serif; }
+.eyebrow      { font-family:'Jost', sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.4em; text-transform:uppercase; color:var(--gold2); }
+h1,h2,h3,h4  { font-family:'Cormorant Garamond', Georgia, serif; font-weight:700; line-height:1.1; }
+h2            { font-size:clamp(2rem,5vw,3rem); color:var(--cream); }
+h3            { font-size:clamp(1.4rem,3vw,1.9rem); color:var(--cream); }
+p             { color:var(--muted); font-size:.98rem; line-height:1.85; }
+
+/* ─── LAYOUT ─── */
+.wrap   { max-width:1080px; margin:0 auto; padding:0 1.5rem; }
+.sec    { padding:6rem 1.5rem; max-width:1080px; margin:0 auto; }
+.sec-sm { padding:4rem 1.5rem; max-width:1080px; margin:0 auto; }
+
+/* ─── DIVIDER ─── */
+.rule {
+  display:flex; align-items:center; gap:1rem;
+  margin-bottom:1.4rem;
+}
+.rule::before, .rule::after {
+  content:''; flex:1; height:1px;
+  background:var(--border);
+}
+.rule-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+
+/* ─── BUTTON ─── */
+.btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.85rem 2.4rem;
+  background:var(--saffron);
+  color:#fff; font-family:'Jost',sans-serif; font-size:.85rem;
+  font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+  border:none; cursor:pointer; border-radius:2px;
+  transition:background .25s, transform .2s;
+}
+.btn:hover { background:var(--saffron2); transform:translateY(-2px); }
+.btn-ghost {
+  background:transparent;
+  border:1px solid rgba(245,237,216,.35);
+  color:var(--cream);
+}
+.btn-ghost:hover { background:rgba(245,237,216,.07); transform:translateY(-2px); }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero {
+  min-height:100vh;
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  /* Replace with your own photo: background-image:url('your-hero.jpg'); */
+  background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1800&q=85');
+  background-size:cover; background-position:center 30%;
+}
+.hero-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(12,7,0,.55) 0%,
+    rgba(12,7,0,.45) 50%,
+    rgba(12,7,0,.85) 100%
+  );
+}
+.hero-inner {
+  position:relative; z-index:2;
+  padding:2rem 1.5rem;
+  max-width:860px; width:100%;
+  display:flex; flex-direction:column; align-items:center; gap:1.2rem;
+}
+.hero-logo {
+  width:110px; height:110px;
+  border-radius:50%; object-fit:cover;
+
+}
+.hero h1 {
+  font-size:clamp(3rem,9vw,7rem);
+  color:#fff;
+  text-shadow:0 2px 24px rgba(12,7,0,.7);
+  letter-spacing:-.01em;
+}
+.hero h1 em {
+  color:var(--gold2); font-style:italic; display:block;
+  font-size:.6em; letter-spacing:.02em;
+}
+.hero-sub {
+  font-size:clamp(.95rem,2.2vw,1.15rem);
+  color:rgba(245,237,216,.85);
+  letter-spacing:.05em;
+}
+.hero-badges {
+  display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center;
+  margin-top:.4rem;
+}
+.hbadge {
+  padding:.38rem 1rem;
+  border:1px solid rgba(201,147,10,.4);
+  border-radius:100px;
+  font-size:.72rem; font-weight:600; letter-spacing:.08em;
+  color:var(--gold2); text-transform:uppercase;
+}
+.hero-cta { margin-top:.6rem; display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+.scroll-cue {
+  position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
+  z-index:2; display:flex; flex-direction:column; align-items:center; gap:.5rem;
+}
+.scroll-cue span { font-size:.6rem; letter-spacing:.35em; color:var(--gold2); text-transform:uppercase; }
+.scroll-line { width:1px; height:36px; background:linear-gradient(var(--gold2),transparent); }
+
+/* ══════════════════════════════════════════
+   ABOUT TWO-COL
+══════════════════════════════════════════ */
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:4rem; align-items:center;
+}
+.about-img {
+  width:100%; 
+  object-fit:cover; border-radius:2px;
+  border:1px solid var(--border);
+}
+.about-text h2 { margin-bottom:1.2rem; }
+.about-text p  { margin-bottom:1rem; }
+
+/* ══════════════════════════════════════════
+   PERIOD BANNER (full-width bg)
+══════════════════════════════════════════ */
+.period-banner {
+  position:relative; overflow:hidden;
+  padding:6rem 1.5rem; text-align:center;
+}
+.period-banner-bg {
+  position:absolute; inset:0;
+  background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20220513/pngtree-brazil-and-india-america-south-brazilian-photo-image_4357837.jpg');
+  background-size:cover; background-position:center;
+}
+.period-banner-overlay {
+  position:absolute; inset:0;
+  background:rgba(12,7,0,.72);
+}
+.period-banner-inner { position:relative; z-index:1; max-width:700px; margin:0 auto; }
+.period-banner h2 { font-size:clamp(2rem,6vw,3.6rem); color:#fff; margin-bottom:.8rem; }
+.period-banner p { font-size:1.05rem; }
+
+/* ══════════════════════════════════════════
+   INCLUDES GRID
+══════════════════════════════════════════ */
+/* ── INCLUDES FULL-BG SECTION ── */
+.inc-section {
+  position:relative; overflow:hidden;
+  padding:6rem 1.5rem;
+}
+.inc-section-bg {
+  position:absolute; inset:0;
+  background-image:url('https://supercurioso.com/wp-content/uploads/2022/12/que-es-el-Diwali-2.jpg');
+  /* 📌 Replace with your Diwali / India festival photo */
+  background-size:cover; background-position:center 60%;
+}
+.inc-section-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(
+    160deg,
+    rgba(8,3,0,.93) 0%,
+    rgba(12,5,0,.88) 50%,
+    rgba(20,8,0,.92) 100%
+  );
+}
+/* corner glow blobs */
+.inc-section-glow {
+  position:absolute; border-radius:50%; pointer-events:none;
+  filter:blur(80px); opacity:.18;
+}
+.inc-section-glow.tl {
+  width:400px; height:400px;
+  background:var(--saffron);
+  top:-100px; left:-100px;
+}
+.inc-section-glow.br {
+  width:350px; height:350px;
+  background:var(--gold);
+  bottom:-80px; right:-80px;
+}
+.inc-section-inner { position:relative; z-index:2; max-width:1080px; margin:0 auto; }
+
+/* top & bottom diya border */
+.inc-diya-row {
+  display:flex; justify-content:center; gap:clamp(1rem,3.5vw,2.5rem);
+  margin:0 0 2.5rem;
+}
+.inc-diya-row.btm { margin:2.5rem 0 0; }
+.inc-diya {
+  width:9px; height:9px; border-radius:50%;
+  background:var(--gold2);
+  box-shadow:0 0 7px 3px rgba(232,183,64,.65), 0 0 18px 5px rgba(232,83,10,.35);
+  position:relative; flex-shrink:0;
+}
+.inc-diya::after {
+  content:'';
+  position:absolute;
+  bottom:100%; left:50%; transform:translateX(-50%);
+  width:2px; height:11px;
+  background:linear-gradient(rgba(232,183,64,.85),transparent);
+  border-radius:1px;
+}
+
+.inc-grid {
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:3px;
+  margin-top:2rem;
+}
+/* each card is a photo card */
+.inc-item {
+  position:relative;
+  min-height:260px;
+  overflow:hidden;
+  border-radius:2px;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  cursor:default;
+}
+/* background image layer */
+.inc-item-bg {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition:transform .55s ease, filter .55s ease;
+  filter:brightness(.55) saturate(.9);
+}
+.inc-item:hover .inc-item-bg {
+  transform:scale(1.07);
+  filter:brightness(.45) saturate(1.1);
+}
+/* dark gradient over image */
+.inc-item-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(6,2,0,.92) 0%,
+    rgba(6,2,0,.55) 45%,
+    rgba(6,2,0,.1) 100%
+  );
+  transition:background .4s;
+}
+.inc-item:hover .inc-item-overlay {
+  background:linear-gradient(
+    to top,
+    rgba(6,2,0,.96) 0%,
+    rgba(232,83,10,.18) 55%,
+    rgba(6,2,0,.25) 100%
+  );
+}
+/* top accent bar */
+.inc-item::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--saffron), var(--gold));
+  z-index:2;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s ease;
+}
+.inc-item:hover::before { transform:scaleX(1); }
+/* text content */
+.inc-item-content {
+  position:relative; z-index:2;
+  padding:1.4rem 1.3rem 1.5rem;
+  display:flex; flex-direction:column; gap:.5rem;
+}
+.inc-item-icon {
+  display:flex; align-items:center; justify-content:center;
+  width:38px; height:38px; border-radius:50%;
+  background:rgba(232,83,10,.2);
+  border:1px solid rgba(232,83,10,.35);
+  margin-bottom:.3rem;
+  transition:background .3s;
+}
+.inc-item:hover .inc-item-icon { background:rgba(232,83,10,.35); }
+.inc-item-icon i { font-size:1.1rem; color:var(--gold2); }
+.inc-item h4 {
+  font-family:'Jost',sans-serif; font-size:.78rem; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color:#fff;
+  line-height:1.3;
+}
+.inc-item p {
+  font-size:.8rem; margin:0; color:rgba(245,237,216,.72); line-height:1.65;
+}
+.inc-item p strong { color:var(--gold2); }
+
+/* mobile: 2 cols */
+@media(max-width:900px) {
+  .inc-grid { grid-template-columns:repeat(2,1fr); }
+  .inc-item { min-height:220px; }
+}
+@media(max-width:480px) {
+  .inc-grid { grid-template-columns:1fr 1fr; gap:2px; }
+  .inc-item { min-height:190px; }
+  .inc-item-content { padding:1rem; }
+  .inc-item h4 { font-size:.7rem; }
+  .inc-item p { font-size:.72rem; }
+}
+
+/* ══════════════════════════════════════════
+   PHOTO STRIP (5 images)
+══════════════════════════════════════════ */
+.photo-strip {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:260px 260px;
+  gap:4px;
+}
+.ps { position:relative; overflow:hidden; }
+.ps img { width:100%; height:100%; object-fit:cover; transition:transform .6s; }
+.ps:hover img { transform:scale(1.04); }
+.ps-cap {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(transparent,rgba(12,7,0,.85));
+  padding:2rem .8rem .7rem;
+  font-size:.65rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold2); font-weight:600;
+}
+.ps1 { grid-column:1; grid-row:1/3; }
+.ps2 { grid-column:2; grid-row:1; }
+.ps3 { grid-column:3; grid-row:1; }
+.ps4 { grid-column:2; grid-row:2; }
+.ps5 { grid-column:3; grid-row:2; }
+
+/* ══════════════════════════════════════════
+   HOTELS
+══════════════════════════════════════════ */
+.hotel-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem;
+}
+.hotel-card { border:1px solid var(--border); border-radius:2px; overflow:hidden; transition:border-color .25s; }
+.hotel-card:hover { border-color:rgba(201,147,10,.5); }
+.hotel-card img { width:100%; height:190px; object-fit:cover; }
+.hotel-info { padding:1.3rem; }
+.hotel-info .stars { color:var(--gold2); font-size:.75rem; margin-bottom:.4rem; }
+.hotel-info h4 { font-family:'Jost',sans-serif; font-size:.88rem; font-weight:700; color:var(--cream); margin-bottom:.3rem; }
+.hotel-info p { font-size:.83rem; }
+
+/* ══════════════════════════════════════════
+   ITINERARY — each day = full-width bg section
+══════════════════════════════════════════ */
+.itinerary { display:flex; flex-direction:column; gap:0; }
+
+.day-section {
+  position:relative; overflow:hidden;
+  min-height:520px;
+  display:flex; align-items:center;
+}
+.day-bg {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+}
+.day-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to right, rgba(12,7,0,.92) 0%, rgba(12,7,0,.75) 55%, rgba(12,7,0,.3) 100%);
+}
+.day-inner {
+  position:relative; z-index:2;
+  max-width:1080px; width:100%; margin:0 auto;
+  padding:4rem 1.5rem;
+  display:grid; grid-template-columns:1fr 2fr; gap:3rem; align-items:start;
+}
+.day-meta { display:flex; flex-direction:column; gap:.6rem; }
+.day-tag {
+  display:inline-block;
+  padding:.3rem .9rem;
+  border:1px solid var(--border);
+  border-radius:100px;
+  font-size:.65rem; letter-spacing:.3em; font-weight:600;
+  color:var(--gold2); text-transform:uppercase;
+}
+.day-tag.special {
+  background:rgba(232,82,10,.2);
+  border-color:rgba(232,82,10,.5);
+  color:#F4793A;
+}
+.day-num-big {
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem; font-weight:700; line-height:1;
+  color:rgba(245,237,216,.12);
+  letter-spacing:-.03em;
+}
+.day-title-sm {
+  font-family:'Jost',sans-serif; font-size:.72rem; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--saffron2);
+}
+.day-content-side h3 { margin-bottom:1.2rem; font-size:clamp(1.3rem,3vw,1.8rem); }
+.day-block { margin-bottom:1.4rem; }
+.day-block-label {
+  font-family:'Jost',sans-serif; font-size:.65rem; font-weight:700;
+  letter-spacing:.25em; text-transform:uppercase;
+  color:var(--gold2); margin-bottom:.5rem; display:block;
+}
+.day-block ul { list-style:none; padding:0; }
+.day-block ul li {
+  font-size:.92rem; color:rgba(245,237,216,.78);
+  padding:.2rem 0 .2rem 1.1rem; position:relative;
+  line-height:1.75;
+}
+.day-block ul li::before { content:'—'; position:absolute; left:0; color:var(--saffron); font-size:.7rem; top:.35rem; }
+.day-block ul li strong { color:var(--gold2); }
+.night-note { margin-top:1.2rem; font-size:.82rem; color:rgba(201,147,10,.8); font-style:italic; }
+
+/* special diwali day */
+.day-section.is-special .day-overlay {
+  background:linear-gradient(to right, rgba(12,7,0,.95) 0%, rgba(30,10,0,.8) 55%, rgba(12,7,0,.4) 100%);
+}
+.diwali-badge {
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.4rem 1rem; background:rgba(232,82,10,.15);
+  border:1px solid rgba(232,82,10,.4); border-radius:2px;
+  font-size:.72rem; font-weight:700; letter-spacing:.15em;
+  color:#F4793A; text-transform:uppercase; margin-bottom:1rem;
+}
+
+/* ══════════════════════════════════════════
+   FERNANDA TESTIMONIAL
+══════════════════════════════════════════ */
+/* ── FOOD SECTION ── */
+.food-section { padding:6rem 1.5rem; max-width:1080px; margin:0 auto; }
+.food-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:240px 200px;
+  gap:6px; margin-top:2.5rem;
+}
+.food-item { position:relative; overflow:hidden; border-radius:2px; }
+.food-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s; }
+.food-item:hover img { transform:scale(1.06); }
+.food-item.large { grid-column:1/3; grid-row:1/3; }
+.food-item.tall  { grid-row:1/3; }
+.food-cap {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(transparent, rgba(8,3,0,.88));
+  padding:2rem .9rem .8rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem; font-weight:700; color:var(--cream);
+}
+.food-cap small {
+  display:block; font-family:'Jost',sans-serif;
+  font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold2); margin-bottom:.2rem;
+}
+
+/* ── TESTIMONIAL — redesigned with side photo ── */
+.testimonial-section {
+  position:relative; overflow:hidden;
+  background:var(--ink2);
+}
+.test-layout {
+  display:grid; grid-template-columns:1fr 1fr;
+  min-height:560px;
+}
+.test-photos { position:relative; overflow:hidden; }
+.test-photos-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  height:100%;
+}
+.test-photo { overflow:hidden; position:relative; }
+.test-photo img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(.8); transition:filter .4s; }
+.test-photo:hover img { filter:brightness(1); }
+.test-photo-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(12,7,0,.3),transparent); }
+.test-photo.main { grid-row:1/3; grid-column:1; }
+.test-content {
+  padding:4rem 3.5rem;
+  display:flex; flex-direction:column; justify-content:center;
+  border-left:1px solid var(--border);
+}
+.test-quote-mark {
+  font-family:'Cormorant Garamond',serif; font-size:6rem; line-height:.7;
+  color:var(--saffron); display:block; margin-bottom:.8rem;
+}
+blockquote {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.15rem,2.5vw,1.5rem);
+  font-style:italic; color:var(--cream);
+  line-height:1.7; margin-bottom:1.8rem;
+}
+.test-divider { width:48px; height:2px; background:var(--saffron); margin-bottom:1.2rem; }
+.test-name { font-family:'Jost',sans-serif; font-size:.9rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold2); }
+.test-role { font-size:.8rem; color:rgba(245,237,216,.45); margin-top:.3rem; }
+.test-countries { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.4rem; }
+.flag-pill {
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:rgba(255,255,255,.05); border:1px solid var(--border);
+  padding:.28rem .7rem; border-radius:100px;
+  font-size:.72rem; color:rgba(245,237,216,.7);
+}
+
+@media(max-width:760px){
+  .test-layout { grid-template-columns:1fr; }
+  .test-photos { min-height:300px; }
+  .test-content { padding:2.5rem 1.5rem; border-left:none; border-top:1px solid var(--border); }
+  .food-grid { grid-template-columns:1fr 1fr; grid-template-rows:200px 160px 160px; }
+  .food-item.large { grid-column:1/3; grid-row:1; }
+  .food-item.tall  { grid-row:auto; }
+}
+
+/* ══════════════════════════════════════════
+   DIWALI HIGHLIGHT
+══════════════════════════════════════════ */
+/* ── DIWALI HIGHLIGHT — full-width bg ── */
+.diwali-hl {
+  position:relative;
+  overflow:hidden;
+  min-height:520px;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  padding:6rem 1.5rem;
+}
+.diwali-hl-bg {
+  position:absolute; inset:0;
+  background-image:url('https://supercurioso.com/wp-content/uploads/2022/12/que-es-el-Diwali-2.jpg');
+  /* 📌 REPLACE with your own Diwali photo */
+  background-size:cover; background-position:center;
+}
+.diwali-hl-overlay {
+  position:absolute; inset:0;
+  background:rgba(10,4,0,.72);
+}
+/* decorative diya lights — pure CSS dots */
+.diya-row {
+  position:absolute; left:0; right:0;
+  display:flex; justify-content:center; gap:clamp(1.2rem,4vw,3rem);
+  z-index:1;
+}
+.diya-row.top { top:2rem; }
+.diya-row.bottom { bottom:2rem; }
+.diya {
+  width:10px; height:10px; border-radius:50%;
+  background:var(--gold2);
+  box-shadow:0 0 8px 3px rgba(232,183,64,.7), 0 0 20px 6px rgba(232,83,10,.4);
+  position:relative;
+}
+.diya::after {
+  content:'';
+  position:absolute;
+  bottom:100%; left:50%; transform:translateX(-50%);
+  width:2px; height:12px;
+  background:linear-gradient(rgba(232,183,64,.8),transparent);
+  border-radius:1px;
+}
+/* side vertical strings */
+.diya-side {
+  position:absolute; top:0; bottom:0;
+  display:flex; flex-direction:column; justify-content:space-evenly; align-items:center;
+  padding:2rem 0; z-index:1;
+}
+.diya-side.left  { left:2.5rem; }
+.diya-side.right { right:2.5rem; }
+.diya-side .diya { width:8px; height:8px; }
+
+.diwali-hl-inner {
+  position:relative; z-index:2;
+  max-width:720px;
+}
+.diwali-hl-inner .eyebrow { color:var(--gold2); margin-bottom:.8rem; display:block; }
+.diwali-hl-inner h2 {
+  font-size:clamp(2rem,5vw,3.4rem);
+  color:#fff; margin-bottom:1.2rem;
+  text-shadow:0 2px 20px rgba(232,83,10,.5);
+}
+.diwali-hl-inner p { font-size:1.05rem; color:rgba(245,237,216,.88); max-width:600px; margin:0 auto; }
+.diwali-divider {
+  width:120px; height:1px; margin:1.2rem auto;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.diwali-icons { font-size:2.2rem; display:block; margin-bottom:1rem; letter-spacing:.5rem; }
+
+/* ══════════════════════════════════════════
+   PRICING
+══════════════════════════════════════════ */
+.pricing-wrap {
+  border:1px solid var(--border); border-radius:2px;
+  max-width:700px; margin:0 auto;
+  overflow:hidden;
+}
+.pricing-head {
+  background:var(--saffron);
+  padding:1.4rem 2rem;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1rem;
+}
+.pricing-head h3 { font-size:1.1rem; color:#fff; margin:0; }
+.pricing-head span { font-size:.75rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.8); }
+.pricing-body { padding:2.5rem 2rem; }
+.price-display {
+  display:flex; align-items:baseline; gap:.5rem; margin-bottom:.5rem;
+}
+.price-currency { font-family:'Jost',sans-serif; font-size:1.4rem; font-weight:700; color:var(--gold2); }
+.price-amount  { font-family:'Cormorant Garamond',serif; font-size:4.5rem; font-weight:700; color:var(--cream); line-height:1; }
+.price-period  { font-size:.85rem; color:var(--muted); }
+.price-note    { font-size:.85rem; color:var(--muted); margin-bottom:2rem; }
+
+.steps-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:2rem 0; }
+.step-item { border-left:2px solid var(--border); padding-left:1rem; }
+.step-n { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:700; color:var(--saffron); line-height:1; }
+.step-item h4 { font-family:'Jost',sans-serif; font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--cream); margin:.3rem 0; }
+.step-item p  { font-size:.82rem; }
+.step-item ul { list-style:none; padding:0; }
+.step-item ul li { font-size:.82rem; color:var(--muted); padding:.1rem 0 .1rem .9rem; position:relative; }
+.step-item ul li::before { content:'✓'; position:absolute; left:0; color:var(--saffron); font-size:.7rem; top:.15rem; }
+
+.deposit-row {
+  background:rgba(201,147,10,.07);
+  border:1px solid var(--border);
+  border-radius:2px;
+  padding:1.4rem 1.6rem;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1rem; margin:1.5rem 0;
+}
+.deposit-lbl h4 { font-family:'Jost',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--gold2); }
+.deposit-lbl p  { font-size:.82rem; margin:.1rem 0 0; }
+.deposit-amt { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:700; color:var(--cream); }
+
+.seats-row { display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; margin:1.5rem 0; }
+.seats-dots { display:flex; gap:.4rem; }
+.seat { width:16px; height:16px; border-radius:50%; background:var(--saffron); }
+.seat.open { background:transparent; border:1.5px solid rgba(245,237,216,.3); }
+.seats-note { font-size:.8rem; color:var(--muted); }
+
+/* ══════════════════════════════════════════
+   WHY EARLY
+══════════════════════════════════════════ */
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; margin-top:2.5rem; }
+.why-item { display:flex; flex-direction:column; gap:.7rem; }
+.why-item ph-icon { font-size:1.6rem; color:var(--saffron); }
+.why-item h4 { font-family:'Jost',sans-serif; font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--cream); }
+.why-item p  { font-size:.88rem; }
+
+/* ══════════════════════════════════════════
+/* ══════════════════════════════════════════
+   CULTURE SECTION
+══════════════════════════════════════════ */
+.culture-section { padding:6rem 1.5rem; max-width:1080px; margin:0 auto; }
+.culture-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:280px 220px;
+  gap:6px; margin-top:2.5rem;
+}
+.culture-item { position:relative; overflow:hidden; border-radius:2px; }
+.culture-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .65s; filter:brightness(.85); }
+.culture-item:hover img { transform:scale(1.06); filter:brightness(1); }
+.culture-item.wide { grid-column:1/3; }
+.culture-item.tall { grid-row:1/3; }
+.culture-cap {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(transparent,rgba(8,3,0,.9));
+  padding:2.5rem 1rem .9rem;
+}
+.culture-cap h4 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:700; color:var(--cream); margin-bottom:.1rem;
+}
+.culture-cap small {
+  font-family:'Jost',sans-serif; font-size:.6rem;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--gold2);
+}
+.culture-tag {
+  position:absolute; top:.8rem; left:.8rem;
+  background:rgba(8,3,0,.7); border:1px solid var(--border);
+  padding:.22rem .65rem; border-radius:100px;
+  font-family:'Jost',sans-serif; font-size:.58rem;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--gold2);
+}
+
+/* ══════════════════════════════════════════
+   CONTACT / WHATSAPP SECTION
+══════════════════════════════════════════ */
+.contact-section {
+  position:relative; overflow:hidden;
+  padding:6rem 1.5rem;
+  background:var(--ink2);
+  border-top:1px solid var(--border);
+}
+.contact-inner { max-width:1080px; margin:0 auto; }
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:2rem; margin-top:2.5rem;
+}
+.contact-card {
+  border:1px solid var(--border); border-radius:2px;
+  padding:2rem; position:relative; overflow:hidden;
+  transition:border-color .25s;
+}
+.contact-card:hover { border-color:rgba(201,147,10,.45); }
+.contact-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold));
+}
+.contact-card-flag { font-size:2rem; display:block; margin-bottom:.8rem; }
+.contact-card-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem; font-weight:700; color:var(--cream); margin-bottom:.2rem;
+}
+.contact-card-role {
+  font-size:.72rem; font-weight:600; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--gold2); margin-bottom:1.2rem; display:block;
+}
+.contact-card-detail {
+  display:flex; align-items:center; gap:.6rem;
+  font-size:.88rem; color:var(--muted); margin-bottom:.5rem;
+}
+.contact-card-detail i { color:var(--saffron); font-size:1rem; flex-shrink:0; }
+.wa-btn {
+  display:inline-flex; align-items:center; gap:.6rem;
+  margin-top:1.4rem;
+  padding:.75rem 1.6rem;
+  background:#25D366;
+  color:#fff; border-radius:2px;
+  font-family:'Jost',sans-serif; font-size:.82rem;
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  text-decoration:none; transition:background .25s, transform .2s;
+}
+.wa-btn:hover { background:#1ebe5d; transform:translateY(-2px); }
+.wa-btn svg { width:18px; height:18px; fill:#fff; flex-shrink:0; }
+
+/* ══════════════════════════════════════════
+   FOOTER — UPDATED
+══════════════════════════════════════════ */
+footer {
+  border-top:1px solid var(--border);
+  background:rgba(0,0,0,.6);
+  padding:4rem 1.5rem 3rem;
+}
+.footer-inner {
+  max-width:1080px; margin:0 auto;
+  display:grid; grid-template-columns:1fr auto;
+  gap:3rem; align-items:start;
+}
+.footer-left { display:flex; flex-direction:column; gap:.6rem; }
+.footer-logo { width:74px; height:74px; border-radius:50%; object-fit:cover; }
+.footer-brand { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; letter-spacing:.2em; color:var(--gold2); }
+.footer-tagline { font-style:italic; color:var(--saffron2); font-size:.88rem; }
+.footer-meta { font-size:.75rem; color:rgba(245,237,216,.3); line-height:1.8; }
+.footer-contacts { display:flex; flex-direction:column; gap:.5rem; }
+.footer-contact-item {
+  display:flex; align-items:center; gap:.5rem;
+  font-size:.8rem; color:rgba(245,237,216,.5);
+}
+.footer-contact-item i { color:var(--saffron); font-size:.9rem; }
+.footer-bottom {
+  max-width:1080px; margin:2rem auto 0;
+  border-top:1px solid rgba(255,255,255,.05);
+  padding-top:1.5rem;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1rem;
+}
+.footer-bottom p { font-size:.72rem; color:rgba(245,237,216,.25); }
+
+@media(max-width:640px){
+  .contact-grid { grid-template-columns:1fr; }
+  .culture-grid { grid-template-columns:1fr 1fr; grid-template-rows:200px 160px 160px; }
+  .culture-item.wide { grid-column:1/3; grid-row:1; }
+  .culture-item.tall { grid-row:auto; }
+  .footer-inner { grid-template-columns:1fr; }
+  .footer-bottom { flex-direction:column; }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media(max-width:860px){
+  .about-grid   { grid-template-columns:1fr; gap:2rem; }
+  .day-inner    { grid-template-columns:1fr; gap:1.5rem; }
+  .day-num-big  { font-size:3rem; }
+  .photo-strip  { grid-template-columns:1fr 1fr; grid-template-rows:200px 200px 200px; }
+  .ps1          { grid-column:1/3; grid-row:1; }
+  .ps2          { grid-column:1;   grid-row:2; }
+  .ps3          { grid-column:2;   grid-row:2; }
+  .ps4          { grid-column:1;   grid-row:3; }
+  .ps5          { grid-column:2;   grid-row:3; }
+  .hotel-grid   { grid-template-columns:1fr; }
+  .steps-row    { grid-template-columns:1fr; }
+}
+@media(max-width:560px){
+  .hero h1 { font-size:3rem; }
+  .day-section { min-height:auto; }
+  .day-overlay { background:rgba(12,7,0,.88); }
+  .diwali-hl { padding:2.5rem 1.2rem; }
+  .pricing-body { padding:1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <!-- Logo — file must be in same folder -->
+    <img
+      src="/logo.png"
+      alt="Roteiros India"
+      class="hero-logo"
+      onerror="this.style.display='none'"
+    >
+
+    <span class="eyebrow">Roteiros India Apresenta</span>
+
+    <h1 class="serif">
+      Índia
+      <em>Passagem Real</em>
+    </h1>
+
+    <p class="hero-sub">Especial Diwali 2026 &nbsp;·&nbsp; Uma Jornada Cultural Exclusiva para Viajantes Brasileiros</p>
+
+    <div class="hero-badges">
+      <span class="hbadge">🗓 1–10 Nov 2026</span>
+      <span class="hbadge">✈️ Voo Incluído</span>
+      <span class="hbadge">👥 Máx. 10 Viajantes</span>
+      <span class="hbadge">🪔 Festival Diwali</span>
+      <span class="hbadge">🇧🇷 Guia Brasileira</span>
+      <span class="hbadge">⭐ Hotéis 4★</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#reserva" class="btn">Reserve Sua Vaga</a>
+      <a href="#roteiro" class="btn btn-ghost">Ver Roteiro</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Descubra</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SOBRE A EXPERIÊNCIA
+═══════════════════════════════════════ -->
+<section class="sec">
+  <div class="about-grid">
+    <div>
+      <!-- Replace src with your own India photo -->
+      <img
+        src="/ChatGPT Image Feb 19, 2026 at 06_32_07 PM (1).png"
+        alt="India"
+        class="about-img"
+      >
+    </div>
+    <div class="about-text">
+      <span class="eyebrow">🌏 Sobre a Experiência</span>
+      <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+      <h2>Uma jornada que vai <em class="serif" style="color:var(--gold2);font-style:italic;">transformar</em> você</h2>
+      <br>
+      <p>Esta viagem exclusiva foi cuidadosamente desenhada para apresentar ao Brasil a magia da Índia — sua história milenar, espiritualidade profunda, herança real e celebrações vibrantes.</p>
+      <p>O grupo parte do Brasil acompanhado por <strong style="color:var(--cream)">Fernanda</strong>, sua guia de turismo brasileira, que auxilia os viajantes durante toda a jornada internacional e ao longo de toda a experiência.</p>
+      <p>Na chegada à Índia, o grupo é calorosamente recebido por <strong style="color:var(--cream)">Mohit</strong>, seu anfitrião e guia local indiano, garantindo segurança, conforto e imersão cultural autêntica durante toda a viagem.</p>
+      <p>Experiência em grupo reduzido: <strong style="color:var(--cream)">Máximo de 10 viajantes.</strong> Atenção personalizada, conforto e memórias inesquecíveis garantidos.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     PERÍODO BANNER
+═══════════════════════════════════════ -->
+<div class="period-banner">
+  <div class="period-banner-bg"></div>
+  <div class="period-banner-overlay"></div>
+  <div class="period-banner-inner">
+    <span class="eyebrow">📅 Período de Viagem</span>
+    <h2>1 a 10 de Novembro de 2026</h2>
+    <p>7 Noites / 8 Dias na Índia &nbsp;·&nbsp; mais o tempo de viagem internacional</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     O QUE ESTÁ INCLUÍDO
+═══════════════════════════════════════ -->
+<div class="inc-section">
+  <div class="inc-section-bg"></div>
+  <div class="inc-section-overlay"></div>
+  <div class="inc-section-glow tl"></div>
+  <div class="inc-section-glow br"></div>
+
+  <div class="inc-section-inner">
+    <!-- top diya row -->
+    <div class="inc-diya-row">
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+    </div>
+
+    <span class="eyebrow">✈️ Cobertura Completa</span>
+    <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+    <h2>Tudo o que está incluído</h2>
+    <p style="max-width:620px;margin-top:.8rem;">Desde o voo até o último passeio, cada detalhe foi pensado para que você só precise se preocupar em viver a experiência.</p>
+
+    <div class="inc-grid">
+
+      <!-- 1. Passagens Aéreas — 📌 replace src with your airline/airport photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-airplane"></i></div>
+          <h4>Passagens Aéreas</h4>
+          <p>Voos internacionais completos Brasil ↔ Índia incluídos no pacote.</p>
+        </div>
+      </div>
+
+      <!-- 2. Visto — 📌 replace with your visa/passport photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-identification-card"></i></div>
+          <h4>Assistência de Visto</h4>
+          <p>Suporte completo para obtenção do visto indiano, do início ao fim.</p>
+        </div>
+      </div>
+
+      <!-- 3. Fernanda — 📌 replace with Fernanda's photo in India -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('/1.jpeg');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-flag"></i></div>
+          <h4>Guia Brasileira Fernanda</h4>
+          <p>Fernanda acompanha o grupo durante toda a jornada e experiência.</p>
+        </div>
+      </div>
+
+      <!-- 4. Mohit — 📌 replace with Mohit's photo or India street -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('/2.jpeg');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-person-simple-walk"></i></div>
+          <h4>Anfitrião Local Mohit</h4>
+          <p>Coordenação completa, segurança e imersão cultural autêntica na Índia.</p>
+        </div>
+      </div>
+
+      <!-- 5. Transporte — 📌 replace with your vehicle/road photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-van"></i></div>
+          <h4>Transporte Privativo AC</h4>
+          <p>Veículo climatizado exclusivo. <strong>Água mineral e lanches disponíveis em todas as viagens.</strong></p>
+        </div>
+      </div>
+
+      <!-- 6. Hotel — 📌 replace with your hotel photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1709715460164-84abbe395f91?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-bed"></i></div>
+          <h4>Hotéis 4 Estrelas</h4>
+          <p>Acomodações selecionadas em hotéis 4★ em Delhi, Agra e Jaipur.</p>
+        </div>
+      </div>
+
+      <!-- 7. Segurança — 📌 replace with safety / support team photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-shield-check"></i></div>
+          <h4>Segurança & Suporte 24h</h4>
+          <p><strong>Assistência completa online e presencial</strong> durante toda a viagem — estamos sempre disponíveis para qualquer emergência.</p>
+        </div>
+      </div>
+
+      <!-- 8. Transfers — 📌 replace with airport/arrival photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-arrows-in-line-horizontal"></i></div>
+          <h4>Transfers no Aeroporto</h4>
+          <p>Transfers de e para o aeroporto e toda a assistência em terra.</p>
+        </div>
+      </div>
+
+      <!-- 9. Ingressos — 📌 replace with Taj Mahal / fort entrance photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-ticket"></i></div>
+          <h4>Todos os Ingressos</h4>
+          <p><strong>Todos os ingressos para monumentos e pontos turísticos incluídos</strong> — sem surpresas.</p>
+        </div>
+      </div>
+
+      <!-- 10. Visitas Guiadas — 📌 replace with Amer Fort / guided tour photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-binoculars"></i></div>
+          <h4>Visitas Guiadas</h4>
+          <p>Visitas aos monumentos históricos com experiências culturais autênticas.</p>
+        </div>
+      </div>
+
+      <!-- 11. Diwali — 📌 replace with your Diwali photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://plus.unsplash.com/premium_photo-1682090867765-39d1790259c5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-lamp"></i></div>
+          <h4>Celebração do Diwali</h4>
+          <p>Celebração especial do Festival das Luzes — o maior festival da Índia.</p>
+        </div>
+      </div>
+
+      <!-- 12. Jantar Rajastanês — 📌 replace with Chokhi Dhani / Rajasthani dinner photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-fork-knife"></i></div>
+          <h4>Jantar Rajastanês</h4>
+          <p><strong>Noite cultural no Chokhi Dhani com jantar tradicional rajastanês completo incluso.</strong></p>
+        </div>
+      </div>
+
+      <!-- 13. Brindes — 📌 replace with gift / welcome kit photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1731964791215-ed423c927976?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-gift"></i></div>
+          <h4>Brindes de Boas-Vindas</h4>
+          <p>Kit especial e suporte de viagem personalizado para cada viajante.</p>
+        </div>
+      </div>
+
+      <!-- 14. Fotografia — 📌 replace with your photography/memories photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-camera"></i></div>
+          <h4>Fotografia de Memórias</h4>
+          <p>Sessão fotográfica profissional para eternizar cada momento especial da sua jornada na Índia.</p>
+        </div>
+      </div>
+
+      <!-- 15. Café da Manhã Incluso — 📌 replace with breakfast buffet photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-egg"></i></div>
+          <h4>Café da Manhã Incluso</h4>
+          <p><strong>Café da manhã completo e buffet variado incluso</strong> em todas as hospedagens do roteiro.</p>
+        </div>
+      </div>
+
+      <!-- 16. Chokhi Dhani Atividades — 📌 replace with camel/elephant ride photo -->
+      <div class="inc-item">
+        <div class="inc-item-bg" style="background-image:url('https://c.pxhere.com/photos/03/79/camel_camel_ride_ride_adventure_vacation-499363.jpg!d');"></div>
+        <div class="inc-item-overlay"></div>
+        <div class="inc-item-content">
+          <div class="inc-item-icon"><i class="ph ph-star"></i></div>
+          <h4>Atividades no Chokhi Dhani</h4>
+          <p><strong>Passeio de camelo, elefante</strong> e diversas atrações culturais e folclóricas inclusas no vilarejo temático.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- bottom diya row -->
+    <div class="inc-diya-row btm">
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+      <div class="inc-diya"></div><div class="inc-diya"></div><div class="inc-diya"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     PHOTO STRIP
+═══════════════════════════════════════ -->
+<div class="wrap" style="margin-bottom:6rem;">
+  <div class="photo-strip">
+    <div class="ps ps1">
+      <!-- Your Taj Mahal photo -->
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=85" alt="Taj Mahal">
+      <span class="ps-cap">Taj Mahal · Agra</span>
+    </div>
+    <div class="ps ps2">
+      <!-- Your Diwali photo -->
+      <img src="https://plus.unsplash.com/premium_photo-1682090867765-39d1790259c5?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diwali">
+      <span class="ps-cap">Festival Diwali</span>
+    </div>
+    <div class="ps ps3">
+      <!-- Your Delhi photo -->
+      <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&q=85" alt="Delhi">
+      <span class="ps-cap">India Gate · Delhi</span>
+    </div>
+    <div class="ps ps4">
+      <!-- Your Amber Fort photo -->
+      <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=85" alt="Amber Fort">
+      <span class="ps-cap">Forte Amber · Jaipur</span>
+    </div>
+    <div class="ps ps5">
+      <!-- Your Hawa Mahal photo -->
+      <img src="https://images.unsplash.com/photo-1706961121783-4ae6c933983a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hawa Mahal">
+      <span class="ps-cap">Hawa Mahal · Jaipur</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     HOSPEDAGEM
+═══════════════════════════════════════ -->
+<section class="sec" style="padding-top:0;">
+  <span class="eyebrow">🏨 Hospedagem</span>
+  <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+  <h2>Hotéis 4 Estrelas Selecionados</h2>
+  <p style="max-width:620px;margin-top:.8rem;">Acomodações confortáveis e verificadas. Quartos compartilhados — 2 viajantes por quarto. Café da manhã incluso diariamente. Propriedades seguras e centrais.</p>
+
+  <div class="hotel-grid">
+    <div class="hotel-card">
+      <!-- Replace with your Delhi hotel photo -->
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/39/3c/ee/the-park-new-delhi.jpg?w=1200&h=-1&s=1" alt="Delhi Hotel">
+      <div class="hotel-info">
+        <div class="stars">★★★★</div>
+        <h4>🏙️ Nova Delhi</h4>
+        <p>Hotel central, seguro e confortável. Café da manhã diário incluso. Propriedade verificada.</p>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <!-- Replace with your Agra hotel photo -->
+      <img src="https://www.holidify.com/images/cmsuploads/compressed/34648580_20220223165312.jpg" alt="Agra Hotel">
+      <div class="hotel-info">
+        <div class="stars">★★★★</div>
+        <h4>🕌 Agra</h4>
+        <p>Próximo ao Taj Mahal. Café da manhã diário incluso. Localização central.</p>
+      </div>
+    </div>
+    <div class="hotel-card">
+      <!-- Replace with your Jaipur hotel photo -->
+      <img src="https://images.unsplash.com/photo-1627442433449-317a17fb6211?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jaipur Hotel">
+      <div class="hotel-info">
+        <div class="stars">★★★★</div>
+        <h4>🏯 Jaipur</h4>
+        <p>Na Cidade Rosa. Café da manhã diário incluso. Ambiente rajastanês autêntico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     ROTEIRO — cada dia tem fundo próprio
+═══════════════════════════════════════ -->
+<div id="roteiro">
+  <div style="background:var(--ink2);padding:4rem 1.5rem;text-align:center;">
+    <span class="eyebrow">🗺️ Programação Detalhada</span>
+    <div class="rule" style="margin-top:.8rem;max-width:300px;margin-left:auto;margin-right:auto;"><div class="rule-dot"></div></div>
+    <h2 style="margin-bottom:.8rem;">Roteiro <em class="serif" style="color:var(--gold2);font-style:italic;">Dia a Dia</em></h2>
+    <p style="max-width:560px;margin:0 auto;">Delhi · Agra · Jaipur · Diwali · Compras · Monumentos · Cultura · Espiritualidade</p>
+  </div>
+
+  <div class="itinerary">
+
+    <!-- ── DIA 1 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE above URL with your own Delhi/India Gate photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 1 · 1 Nov</span>
+          <div class="day-num-big">01</div>
+          <p class="day-title-sm">📍 Nova Delhi</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🛬 Chegada em Nova Delhi 🇮🇳</h3>
+          <p style="margin-bottom:1.5rem;">Após viajar juntos do Brasil com Fernanda, chegada à Índia e boas-vindas calorosas de Mohit no Aeroporto Internacional de Nova Delhi.</p>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Transfer privativo do aeroporto</li>
+              <li>Check-in no hotel e descanso após a longa viagem internacional</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite — 17h30 às 20h30</span>
+            <ul>
+              <li>Primeira introdução à Índia com visita ao icônico India Gate</li>
+              <li>Passeio panorâmico pelo boulevard cerimonial de Nova Delhi</li>
+              <li>Briefing de boas-vindas e apresentação geral da jornada</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Delhi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 2 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://cdn.britannica.com/75/152475-050-DA89FF0A/Red-Fort-Old-Delhi-India.jpg');"></div>
+      <!-- 📌 REPLACE with your own Red Fort / ISKCON photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 2 · 2 Nov</span>
+          <div class="day-num-big">02</div>
+          <p class="day-title-sm">📍 Nova Delhi</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🕌 Descobrindo Delhi</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Manhã</span>
+            <ul>
+              <li>Visita aos arredores históricos do Forte Vermelho</li>
+              <li>Panorama do exterior da Jama Masjid</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Visita ao deslumbrante Templo de Lótus</li>
+              <li>Experiência espiritual no Templo ISKCON</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite</span>
+            <ul>
+              <li>Retorno ao hotel e momento de relaxamento</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Delhi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 3 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your Agra Fort photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 3 · 3 Nov</span>
+          <div class="day-num-big">03</div>
+          <p class="day-title-sm">📍 Delhi → Agra</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🏰 Delhi → Agra</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Manhã</span>
+            <ul>
+              <li>Viagem confortável para Agra em veículo privativo climatizado <strong>( água mineral e lanches disponíveis a bordo)</strong></li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Check-in no hotel</li>
+              <li>Visita ao Forte de Agra — residência real dos imperadores Mughal</li>
+              <li>Experiência ao pôr do sol na área próxima ao Taj Mahal</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Agra.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 4 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your Taj Mahal sunrise photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 4 · 4 Nov</span>
+          <div class="day-num-big">04</div>
+          <p class="day-title-sm">📍 Agra → Jaipur</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🌅 Taj Mahal ao Amanhecer & Jaipur</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌄 Amanhecer</span>
+            <ul>
+              <li>Visita ao magnífico Taj Mahal ao nascer do sol <strong>(ingressos incluídos)</strong> — um dos momentos mais especiais e mágicos de toda a viagem</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Final da Manhã</span>
+            <ul>
+              <li>Café da manhã</li>
+              <li>Partida em direção a Jaipur, a Cidade Rosa</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite</span>
+            <ul>
+              <li>Chegada a Jaipur e check-in no hotel</li>
+              <li>Tempo livre e descanso</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Jaipur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 5 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your Amber Fort / Jaipur palace photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 5 · 5 Nov</span>
+          <div class="day-num-big">05</div>
+          <p class="day-title-sm">📍 Jaipur</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🏯 Experiência Real em Jaipur</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Manhã</span>
+            <ul>
+              <li>Visita ao majestoso Forte Amber — uma das fortalezas mais impressionantes do Rajastão</li>
+              <li>Parada fotográfica no Jal Mahal (Palácio da Água)</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Exploração do Palácio da Cidade</li>
+              <li>Visita ao icônico Hawa Mahal (Palácio dos Ventos)</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite</span>
+            <ul>
+              <li>Retorno ao hotel</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Jaipur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 6 — DIWALI ESPECIAL ── -->
+    <div class="day-section is-special">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your Diwali / Chokhi Dhani photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag special">✨ Especial</span>
+          <span class="day-tag" style="margin-top:.4rem;">Dia 6 · 6 Nov</span>
+          <div class="day-num-big">06</div>
+          <p class="day-title-sm">📍 Jaipur</p>
+        </div>
+        <div class="day-content-side">
+          <div class="diwali-badge">🪔 Noite do Diwali</div>
+          <h3>Diwali & Cultura Rajastanesa 🎆</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Manhã</span>
+            <ul>
+              <li>Visita ao Forte Nahargarh com vistas panorâmicas deslumbrantes de toda a cidade de Jaipur</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Descanso e preparação para a grande celebração da noite</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite — Especial Diwali</span>
+            <ul>
+              <li>Visita cultural à aldeia tradicional Chokhi Dhani</li>
+              <li>Danças folclóricas, música e apresentações ao vivo</li>
+              <li>Luzes festivas e celebração autêntica do Diwali</li>
+              <li><strong>Jantar Rajastanês Tradicional incluso no Chokhi Dhani</strong></li>
+              <li>Vivencie o Festival das Luzes em atmosfera genuinamente tradicional e inesquecível</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Jaipur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 7 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your Delhi market / shopping photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 7 · 7 Nov</span>
+          <div class="day-num-big">07</div>
+          <p class="day-title-sm">📍 Jaipur → Delhi</p>
+        </div>
+        <div class="day-content-side">
+          <h3>🛍️ Retorno a Delhi & Compras</h3>
+
+          <div class="day-block">
+            <span class="day-block-label">🌅 Manhã</span>
+            <ul>
+              <li>Viagem confortável de volta a Delhi em veículo privativo climatizado</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">☀️ Tarde</span>
+            <ul>
+              <li>Check-in no hotel e tempo livre para relaxar</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Noite — Experiência de Compras</span>
+            <ul>
+              <li>Visita guiada aos famosos mercados locais para compras e lembranças</li>
+              <li>Explore artesanato indiano, tecidos, joias e presentes culturais únicos</li>
+              <li>Assistência de Mohit e Fernanda para uma experiência segura e confortável</li>
+            </ul>
+          </div>
+
+          <div class="day-block">
+            <span class="day-block-label">🌙 Despedida</span>
+            <ul>
+              <li>Confraternização de despedida com o grupo e compartilhamento das memórias mais marcantes da viagem</li>
+            </ul>
+          </div>
+
+          <p class="night-note">🌙 Pernoite em Delhi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DIA 8 ── -->
+    <div class="day-section">
+      <div class="day-bg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&q=80');"></div>
+      <!-- 📌 REPLACE with your airport / departure photo -->
+      <div class="day-overlay"></div>
+      <div class="day-inner">
+        <div class="day-meta">
+          <span class="day-tag">Dia 8 · 8–10 Nov</span>
+          <div class="day-num-big">08</div>
+          <p class="day-title-sm">📍 Delhi → Brasil</p>
+        </div>
+        <div class="day-content-side">
+          <h3>✈️ Partida — De Volta ao Brasil</h3>
+          <p style="margin-bottom:1.5rem;">Com memórias eternas e a alma cheia de cultura, histórias e momentos que durarão para sempre.</p>
+
+          <div class="day-block">
+            <span class="day-block-label">Programação</span>
+            <ul>
+              <li>Café da manhã no hotel</li>
+              <li>Assistência para transfer ao aeroporto</li>
+              <li>Jornada de retorno ao Brasil com memórias inesquecíveis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /itinerary -->
+</div><!-- /roteiro -->
+
+
+<!-- ═══════════════════════════════════════
+     DIWALI DESTAQUE — full bg
+═══════════════════════════════════════ -->
+<div class="diwali-hl">
+  <div class="diwali-hl-bg"></div>
+  <div class="diwali-hl-overlay"></div>
+
+  <!-- top row of diyas -->
+  <div class="diya-row top">
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+  </div>
+
+  <!-- side diyas -->
+  <div class="diya-side left">
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div><div class="diya"></div>
+  </div>
+  <div class="diya-side right">
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div><div class="diya"></div>
+  </div>
+
+  <div class="diwali-hl-inner">
+    <span class="diwali-icons">🪔 ✨ 🪔</span>
+    <span class="eyebrow">Noite Especial · Dia 6 · Jaipur</span>
+    <div class="diwali-divider"></div>
+    <h2>Celebre o Diwali na Índia</h2>
+    <div class="diwali-divider"></div>
+    <p>Visite o Chokhi Dhani, uma autêntica aldeia cultural tradicional, com danças folclóricas ao vivo, músicos, artesãos, luzes festivas e a magia do maior festival da Índia — o Festival das Luzes. <strong style="color:var(--gold2)">Jantar rajastanês tradicional completo incluso.</strong> Uma noite que ficará para sempre gravada na sua memória.</p>
+  </div>
+
+  <!-- bottom row of diyas -->
+  <div class="diya-row bottom">
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+    <div class="diya"></div><div class="diya"></div><div class="diya"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     GASTRONOMIA INDIANA
+═══════════════════════════════════════ -->
+<section class="food-section">
+  <span class="eyebrow">🍛 Sabores da Índia</span>
+  <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+  <h2>Uma viagem que também é <em class="serif" style="color:var(--gold2);font-style:italic;">para o paladar</em></h2>
+  <p style="max-width:620px;margin-top:.8rem;">A culinária indiana é uma experiência à parte — cores vibrantes, especiarias únicas e sabores que contam séculos de história. Do café da manhã ao jantar festivo no Chokhi Dhani, cada refeição é uma celebração.</p>
+
+  <div class="food-grid">
+
+    <!-- 📌 Large hero food — replace with your own photo -->
+    <div class="food-item large">
+      <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=85" alt="Indian Thali">
+      <div class="food-cap">
+        <small>Prato Principal</small>
+        Thali Rajastanês
+      </div>
+    </div>
+
+    <!-- 📌 Replace each src with your own food photos -->
+    <div class="food-item">
+      <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=500&q=85" alt="Biryani">
+      <div class="food-cap">
+        <small>Clássico Indiano</small>
+        Biryani
+      </div>
+    </div>
+
+    <div class="food-item tall">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=85" alt="Samosa">
+      <div class="food-cap">
+        <small>Street Food</small>
+        Samosa & Chutney
+      </div>
+    </div>
+
+    <div class="food-item">
+      <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=500&q=85" alt="Masala Chai">
+      <div class="food-cap">
+        <small>Bebida Sagrada</small>
+        Masala Chai
+      </div>
+    </div>
+
+    <div class="food-item">
+      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=500&q=85" alt="Butter Naan">
+      <div class="food-cap">
+        <small>Pão Artesanal</small>
+        Butter Naan
+      </div>
+    </div>
+
+  </div>
+
+  <!-- small note -->
+  <p style="margin-top:1.5rem;font-size:.82rem;border-left:2px solid var(--saffron);padding-left:1rem;">
+    <strong style="color:var(--cream);">Nota:</strong> O jantar no Chokhi Dhani durante o Diwali é um banquete completo de culinária rajastanesa tradicional — incluso no pacote. Restrições alimentares são acomodadas com aviso prévio.
+  </p>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FERNANDA — DEPOIMENTO
+═══════════════════════════════════════ -->
+<div class="testimonial-section">
+  <div class="test-layout">
+
+    <!-- LEFT: photo collage -->
+    <div class="test-photos">
+      <div class="test-photos-grid">
+        <!-- 📌 Main photo — Fernanda in India (tall, spans both rows left column) -->
+        <div class="test-photo main">
+          <img
+            src="/7.jpeg"
+            alt="Fernanda na Índia"
+          >
+          <!-- 📌 REPLACE the src above with: src="fernanda-india.jpg"
+               This will be your real photo of Fernanda in India -->
+          <div class="test-photo-overlay"></div>
+        </div>
+        <!-- 📌 Top-right: another India photo of Fernanda -->
+        <div class="test-photo">
+          <img
+            src="/5.jpeg"
+            alt="Taj Mahal"
+          >
+          <!-- 📌 REPLACE with: src="fernanda-tajmahal.jpg" -->
+          <div class="test-photo-overlay"></div>
+        </div>
+        <!-- 📌 Bottom-right: Fernanda at Jaipur / another destination -->
+        <div class="test-photo">
+          <img
+            src="/6.jpeg"
+            alt="Jaipur"
+          >
+          <!-- 📌 REPLACE with: src="fernanda-jaipur.jpg" -->
+          <div class="test-photo-overlay"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: quote + info -->
+    <div class="test-content">
+      <span class="eyebrow" style="margin-bottom:1.2rem;display:block;">Quem Vai Te Guiar</span>
+
+      <span class="test-quote-mark">"</span>
+
+      <blockquote>
+        A Índia é um país que muda você por dentro. Cada templo, cada mercado, cada sorriso indiano guarda uma história. Viajar para cá foi a experiência mais transformadora da minha vida — e agora quero compartilhar essa magia com você.
+      </blockquote>
+
+      <div class="test-divider"></div>
+
+      <!-- 📌 Add logo here — replace src with your logo file -->
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+        <img
+          src="/1 - Copy.jpeg"
+          alt="Roteiros India"
+          style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:1.5px solid var(--gold2);"
+          onerror="this.style.display='none'"
+        >
+        <div>
+          <p class="test-name" style="margin:0;">Fernanda</p>
+          <p class="test-role" style="margin:0;">Guia de Turismo Brasileira · Especialista em Índia</p>
+        </div>
+      </div>
+
+      <div class="test-countries">
+        <span class="flag-pill">🇮🇳 Índia</span>
+        <span class="flag-pill">🏯 Rajastão</span>
+        <span class="flag-pill">🕌 Delhi · Agra · Jaipur</span>
+        <span class="flag-pill">🪔 Diwali</span>
+        <span class="flag-pill">🇧🇷 Guia Bilíngue</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     INVESTIMENTO & RESERVA
+═══════════════════════════════════════ -->
+<section class="sec" id="reserva">
+  <span class="eyebrow">💰 Investimento</span>
+  <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+  <h2 style="margin-bottom:2.5rem;">Como Reservar Sua Vaga</h2>
+
+  <div class="pricing-wrap">
+    <div class="pricing-head">
+      <h3>Pacote Completo por Pessoa</h3>
+      <span>✈️ Inclui Voos Internacionais</span>
+    </div>
+    <div class="pricing-body">
+      <div class="price-display">
+        <span class="price-currency">R$</span>
+        <span class="price-amount">15.500</span>
+        <span class="price-period">/ por pessoa</span>
+      </div>
+      <p class="price-note">Pacote completo incluindo voos, hotéis, transporte, ingressos de todos os monumentos, experiências guiadas e celebração do Diwali com jantar.</p>
+
+      <div class="deposit-row">
+        <div class="deposit-lbl">
+          <h4>✅ Depósito de Reserva</h4>
+          <p>Confirma sua vaga · Reserva do voo · Bloqueio do hotel</p>
+        </div>
+        <span class="deposit-amt">R$ 3.000</span>
+      </div>
+
+      <span class="seats-lbl" style="font-family:'Jost';font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.7rem;">Vagas no Grupo — máx. 10 viajantes</span>
+      <div class="seats-row">
+        <div class="seats-dots">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+          <div class="seat open"></div>
+        </div>
+        <span class="seats-note">● Ocupadas &nbsp; ○ Disponíveis — Reserve antes que esgotem!</span>
+      </div>
+
+      <div class="steps-row" style="margin-top:2rem;">
+        <div class="step-item">
+          <div class="step-n">01</div>
+          <h4>Confirmação</h4>
+          <p>Depósito de R$ 3.000 por pessoa confirma:</p>
+          <ul>
+            <li>Sua vaga no grupo</li>
+            <li>Processo de reserva do voo</li>
+            <li>Bloqueio do hotel</li>
+          </ul>
+        </div>
+        <div class="step-item">
+          <div class="step-n">02</div>
+          <h4>Pagamento</h4>
+          <p>O saldo restante pode ser pago em parcelas antes da partida. Nossa equipe irá auxiliá-lo pessoalmente no planejamento.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-n">03</div>
+          <h4>Preparação</h4>
+          <ul>
+            <li>Orientações sobre o visto</li>
+            <li>Suporte de preparação para a viagem</li>
+            <li>Pacote completo de informações</li>
+            <li>Contato direto com Fernanda e Mohit</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="#" class="btn">
+          <i class="ph ph-envelope" style="font-size:1rem;"></i>
+          Entre em Contato e Reserve Agora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     POR QUE RESERVAR CEDO
+═══════════════════════════════════════ -->
+<section class="sec" style="padding-top:0;">
+  <span class="eyebrow">❤️ Por Que Reservar Cedo?</span>
+  <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+  <h2>Não perca esta oportunidade</h2>
+
+  <div class="why-grid">
+    <div class="why-item">
+      <i class="ph ph-trend-up" style="font-size:1.6rem;color:var(--saffron);"></i>
+      <h4>Preços de Voo</h4>
+      <p>Os preços das passagens aumentam conforme a data de embarque se aproxima. Reserve agora e garanta o melhor valor.</p>
+    </div>
+    <div class="why-item">
+      <i class="ph ph-lamp" style="font-size:1.6rem;color:var(--saffron);"></i>
+      <h4>Alta Temporada Diwali</h4>
+      <p>O Diwali é a época de maior demanda para viagens à Índia — a mais disputada do calendário.</p>
+    </div>
+    <div class="why-item">
+      <i class="ph ph-bed" style="font-size:1.6rem;color:var(--saffron);"></i>
+      <h4>Disponibilidade Hoteleira</h4>
+      <p>Hotéis se esgotam rapidamente durante o festival. Garantir sua vaga cedo assegura os melhores quartos.</p>
+    </div>
+    <div class="why-item">
+      <i class="ph ph-users" style="font-size:1.6rem;color:var(--saffron);"></i>
+      <h4>Grupo Reduzido</h4>
+      <p>Apenas 10 viajantes. Cada vaga é preciosa — quando esgotarem, não haverá lista de espera.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     CULTURA INDIANA
+═══════════════════════════════════════ -->
+<section class="culture-section">
+  <span class="eyebrow">🕉️ Espiritualidade & Cultura</span>
+  <div class="rule" style="margin-top:.8rem;"><div class="rule-dot"></div></div>
+  <h2>A alma de uma <em class="serif" style="color:var(--gold2);font-style:italic;">civilização milenar</em></h2>
+  <p style="max-width:680px;margin-top:.8rem;">Além dos monumentos, a Índia revela sua essência através da espiritualidade, da arte, dos rituais e da filosofia que moldaram o mundo. Yoga, meditação, divindades e cores — uma imersão que vai além do turismo.</p>
+
+  <div class="culture-grid">
+
+    <!-- 📌 Replace all src with your own India culture photos -->
+    <div class="culture-item wide">
+      <img src="https://www.lasociedadgeografica.com/blog/uploads/isha-yoga-center-yoga.jpeg" alt="Yoga India">
+      <span class="culture-tag">Bem-Estar</span>
+      <div class="culture-cap">
+        <small>Prática Milenar</small>
+        <h4>Yoga na Terra que o Criou</h4>
+      </div>
+    </div>
+
+    <div class="culture-item tall">
+      <img src="https://media.architecturaldigest.com/photos/65381835a4c2527dfe21a0ef/master/w_1600%2Cc_limit/GettyImages-1718465939.jpg" alt="Hindu Temple">
+      <span class="culture-tag">Espiritualidade</span>
+      <div class="culture-cap">
+        <small>Sagrado</small>
+        <h4>Templos Hindus</h4>
+      </div>
+    </div>
+
+    <div class="culture-item">
+      <img src="https://1.bp.blogspot.com/-LCVBBnWnEnQ/XpA21-kkPHI/AAAAAAABhqM/CLVd3rewMmQ0YRR00BH23Y49tcskAFOUgCLcBGAsYHQ/s1600/2019-12-07%2B%25281%2529.jpg" alt="Ganesha">
+      <span class="culture-tag">Divindades</span>
+      <div class="culture-cap">
+        <small>Deus da Prosperidade</small>
+        <h4>Ganesha</h4>
+      </div>
+    </div>
+
+    <div class="culture-item">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=85" alt="Indian Dance">
+      <span class="culture-tag">Arte</span>
+      <div class="culture-cap">
+        <small>Dança Clássica</small>
+        <h4>Bharatanatyam</h4>
+      </div>
+    </div>
+
+    <div class="culture-item">
+      <img src="https://i.ytimg.com/vi/AFndBrp6Iqs/maxresdefault.jpg" alt="Meditation">
+      <span class="culture-tag">Meditação</span>
+      <div class="culture-cap">
+        <small>Paz Interior</small>
+        <h4>Meditação & Mantra</h4>
+      </div>
+    </div>
+
+    <div class="culture-item">
+      <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&q=85" alt="Holi Colors">
+      <span class="culture-tag">Festival</span>
+      <div class="culture-cap">
+        <small>Cores da Índia</small>
+        <h4>Arte & Rangoli</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════ -->
+<div class="final-cta">
+  <div class="final-bg"></div>
+  <div class="final-overlay"></div>
+  <div class="final-inner">
+    <span class="eyebrow" style="display:block;margin-bottom:1rem;">🌟 Reserve Agora</span>
+    <h2>Mais do que uma viagem —<br><em class="serif" style="color:var(--gold2);">uma transformação cultural</em></h2>
+    <p>Repleta de história, celebração e momentos inesquecíveis. Fale com Fernanda ou Mohit agora e garanta sua vaga.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#contato" class="btn">Garantir Minha Vaga · Diwali 2026</a>
+      <a href="https://wa.me/5511947727979" target="_blank" class="btn" style="background:#25D366;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Agora
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato — Índia Passagem Real</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ 
+
+  /* ── SECTION ── */
+  .contact-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 24px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* ── BACKGROUND LAYERS ── */
+  .bg-scene {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  /* Base photo-like gradient evoking Rajasthan golden hour */
+  .bg-scene::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 110%, #7b3a0a 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 85% -10%, #2d1a00 0%, transparent 50%),
+      radial-gradient(ellipse 100% 80% at 50% 50%, #1a0e00 0%, #0d0a05 100%);
+  }
+
+  /* Palace silhouette SVG layer */
+  .bg-palace {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    max-width: 1400px;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  /* Diwali lanterns / diyas floating */
+  .lantern {
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    border-radius: 50% 50% 40% 40%;
+    background: radial-gradient(circle at 40% 40%, #ffd97a, #e07b00);
+    box-shadow: 0 0 18px 6px rgba(230,140,0,0.5), 0 0 40px 10px rgba(230,100,0,0.2);
+    animation: float-lantern var(--dur,8s) ease-in-out infinite;
+    animation-delay: var(--del,0s);
+    opacity: 0.85;
+  }
+  .lantern::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 14px;
+    background: rgba(255,210,100,0.4);
+  }
+  @keyframes float-lantern {
+    0%,100% { transform: translateY(0) rotate(-3deg); }
+    50%      { transform: translateY(-18px) rotate(3deg); }
+  }
+
+  /* Gold bokeh dots */
+  .bokeh {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,185,107,0.6) 0%, transparent 70%);
+    animation: pulse-bokeh var(--dur,5s) ease-in-out infinite;
+    animation-delay: var(--del,0s);
+  }
+  @keyframes pulse-bokeh {
+    0%,100% { opacity: 0.4; transform: scale(1); }
+    50%      { opacity: 0.9; transform: scale(1.3); }
+  }
+
+  /* Mandala ring top-right */
+  .mandala-ring {
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(201,147,74,0.12);
+    border-radius: 50%;
+    animation: spin-slow 40s linear infinite;
+    opacity: 0.5;
+  }
+  .mandala-ring::before {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(201,147,74,0.18);
+    border-radius: 50%;
+  }
+  .mandala-ring::after {
+    content: '';
+    position: absolute;
+    inset: 60px;
+    border: 1px solid rgba(201,147,74,0.12);
+    border-radius: 50%;
+  }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+  /* Mandala bottom-left */
+  .mandala-ring-2 {
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(201,147,74,0.1);
+    border-radius: 50%;
+    animation: spin-slow 30s linear infinite reverse;
+    opacity: 0.4;
+  }
+
+  /* ── INNER ── */
+  .contact-inner {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    padding: .35rem 1.1rem;
+    border: 1px solid rgba(232,185,107,.35);
+    border-radius: 100px;
+    background: rgba(232,185,107,.07);
+    backdrop-filter: blur(6px);
+  }
+
+  .rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.2rem auto;
+  }
+  .rule::before, .rule::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,147,74,.5));
+  }
+  .rule::after { background: linear-gradient(90deg, rgba(201,147,74,.5), transparent); }
+  .rule-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold2);
+    box-shadow: 0 0 10px 3px rgba(232,185,107,.5);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 400;
+    color: #f0e6d0;
+    line-height: 1.15;
+  }
+  h2 em { color: var(--gold2); font-style: italic; }
+
+  .subtitle {
+    font-size: .95rem;
+    color: rgba(240,230,208,.6);
+    line-height: 1.7;
+    max-width: 540px;
+    margin: .9rem auto 0;
+    font-weight: 300;
+  }
+
+  /* ── GRID ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 3rem;
+  }
+  @media (max-width: 640px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── CARD ── */
+  .contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2rem 1.8rem 1.8rem;
+    backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232,185,107,.6);
+    box-shadow: 0 20px 60px rgba(0,0,0,.4), 0 0 30px rgba(201,147,74,.15);
+  }
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold2), transparent);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .contact-card:hover::before { opacity: 1; }
+
+  /* Corner ornament */
+  .contact-card::after {
+    content: '✦';
+    position: absolute;
+    bottom: 14px; right: 18px;
+    font-size: .7rem;
+    color: rgba(201,147,74,.2);
+  }
+
+  /* Flag badge */
+  .contact-card-flag-wrap {
+    position: relative;
+    width: 72px;
+    height: 48px;
+    margin-bottom: .8rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.1);
+    flex-shrink: 0;
+  }
+  .contact-card-flag-wrap svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /* Glow ring under flag */
+  .contact-card-flag-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 50%;
+    transform: translateX(-50%);
+    width: 56px; height: 10px;
+    background: radial-gradient(ellipse, rgba(232,185,107,.45), transparent 70%);
+    border-radius: 50%;
+  }
+
+  .contact-card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #f0e6d0;
+    text-align: center;
+    margin-top: .2rem;
+  }
+
+  .contact-card-role {
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold2);
+    opacity: .8;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: .6rem;
+  }
+
+  /* Divider */
+  .card-divider {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,147,74,.5), transparent);
+    margin: .4rem 0;
+  }
+
+  .contact-card-detail {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .82rem;
+    color: rgba(240,230,208,.65);
+    font-weight: 300;
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-card-detail svg {
+    width: 14px; height: 14px;
+    fill: var(--gold2);
+    opacity: .7;
+    flex-shrink: 0;
+  }
+
+  /* WhatsApp button */
+  .wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    margin-top: 1.2rem;
+    padding: .75rem 1.4rem;
+    width: 100%;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #128c3e, #25d366);
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-decoration: none;
+    transition: opacity .2s, transform .2s, box-shadow .2s;
+    box-shadow: 0 6px 24px rgba(37,211,102,.25);
+  }
+  .wa-btn:hover {
+    opacity: .9;
+    transform: scale(1.03);
+    box-shadow: 0 10px 32px rgba(37,211,102,.35);
+  }
+  .wa-btn svg {
+    width: 18px; height: 18px;
+    fill: #fff;
+    flex-shrink: 0;
+  }
+
+  /* Bottom note */
+  .contact-note {
+    margin-top: 2.5rem;
+    font-size: .78rem;
+    color: rgba(240,230,208,.35);
+    letter-spacing: .08em;
+  }
+</style>
+
+
+<div class="contact-section" id="contato">
+
+  <!-- Background scene -->
+  <div class="bg-scene">
+
+    <!-- Palace silhouette -->
+    <svg class="bg-palace" viewBox="0 0 1400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Main palace body -->
+      <rect x="350" y="160" width="700" height="160" fill="#c9934a"/>
+      <!-- Central dome -->
+      <ellipse cx="700" cy="160" rx="90" ry="70" fill="#c9934a"/>
+      <rect x="655" y="90" width="90" height="70" fill="#c9934a"/>
+      <polygon points="700,30 640,90 760,90" fill="#c9934a"/>
+      <!-- Finial -->
+      <line x1="700" y1="30" x2="700" y2="8" stroke="#c9934a" stroke-width="4"/>
+      <circle cx="700" cy="5" r="5" fill="#c9934a"/>
+      <!-- Left wing -->
+      <rect x="200" y="190" width="200" height="130" fill="#c9934a"/>
+      <ellipse cx="300" cy="190" rx="50" ry="40" fill="#c9934a"/>
+      <rect x="274" y="150" width="52" height="40" fill="#c9934a"/>
+      <polygon points="300,120 270,150 330,150" fill="#c9934a"/>
+      <!-- Right wing -->
+      <rect x="1000" y="190" width="200" height="130" fill="#c9934a"/>
+      <ellipse cx="1100" cy="190" rx="50" ry="40" fill="#c9934a"/>
+      <rect x="1074" y="150" width="52" height="40" fill="#c9934a"/>
+      <polygon points="1100,120 1070,150 1130,150" fill="#c9934a"/>
+      <!-- Arches left -->
+      <path d="M370,320 L370,220 Q395,195 420,220 L420,320" fill="#0d0a05"/>
+      <path d="M440,320 L440,220 Q465,195 490,220 L490,320" fill="#0d0a05"/>
+      <path d="M510,320 L510,220 Q535,195 560,220 L560,320" fill="#0d0a05"/>
+      <!-- Arches right -->
+      <path d="M840,320 L840,220 Q865,195 890,220 L890,320" fill="#0d0a05"/>
+      <path d="M910,320 L910,220 Q935,195 960,220 L960,320" fill="#0d0a05"/>
+      <path d="M980,320 L980,220 Q1005,195 1030,220 L1030,320" fill="#0d0a05"/>
+      <!-- Centre arch -->
+      <path d="M630,320 L630,190 Q700,140 770,190 L770,320" fill="#0d0a05"/>
+      <!-- Ground -->
+      <rect x="0" y="310" width="1400" height="10" fill="#c9934a" opacity="0.3"/>
+    </svg>
+
+    <!-- Mandala rings -->
+    <div class="mandala-ring"></div>
+    <div class="mandala-ring-2"></div>
+
+    <!-- Floating lanterns -->
+    <div class="lantern" style="left:8%;top:12%;--dur:9s;--del:0s;"></div>
+    <div class="lantern" style="left:18%;top:28%;--dur:7s;--del:1.5s;width:14px;height:19px;"></div>
+    <div class="lantern" style="left:75%;top:10%;--dur:10s;--del:.8s;"></div>
+    <div class="lantern" style="left:88%;top:32%;--dur:8s;--del:2s;width:14px;height:19px;"></div>
+    <div class="lantern" style="left:50%;top:5%;--dur:11s;--del:.3s;width:22px;height:28px;"></div>
+    <div class="lantern" style="left:35%;top:18%;--dur:7.5s;--del:3s;width:12px;height:16px;"></div>
+    <div class="lantern" style="left:63%;top:22%;--dur:9.5s;--del:1s;width:12px;height:16px;"></div>
+
+    <!-- Gold bokeh -->
+    <div class="bokeh" style="left:5%;top:60%;width:60px;height:60px;--dur:6s;--del:0s;"></div>
+    <div class="bokeh" style="left:92%;top:70%;width:40px;height:40px;--dur:8s;--del:2s;"></div>
+    <div class="bokeh" style="left:45%;top:80%;width:80px;height:80px;--dur:7s;--del:.5s;"></div>
+    <div class="bokeh" style="left:25%;top:50%;width:30px;height:30px;--dur:5s;--del:3s;"></div>
+    <div class="bokeh" style="left:70%;top:55%;width:50px;height:50px;--dur:9s;--del:1s;"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="contact-inner">
+
+    <span class="eyebrow">📲 Fale Conosco</span>
+
+    <div class="rule"><div class="rule-dot"></div></div>
+
+    <h2>Entre em contato e <em>reserve agora</em></h2>
+    <p class="subtitle">Nossa equipe está disponível para responder todas as suas dúvidas e ajudar a garantir sua vaga. Fale diretamente com Fernanda (Brasil) ou Mohit (Índia).</p>
+
+    <div class="contact-grid">
+
+      <!-- FERNANDA -->
+      <div class="contact-card">
+        <div class="contact-card-flag-wrap">
+          <!-- Brazil flag SVG -->
+          <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+            <rect width="72" height="48" fill="#009c3b"/>
+            <polygon points="36,5 68,24 36,43 4,24" fill="#ffdf00"/>
+            <circle cx="36" cy="24" r="11" fill="#002776"/>
+            <!-- White band -->
+            <path d="M25.5,21.5 Q36,17 46.5,21.5" stroke="white" stroke-width="2.5" fill="none"/>
+            <text x="36" y="27" text-anchor="middle" font-size="5" font-family="Arial" font-weight="bold" fill="white" letter-spacing="1">BRASIL</text>
+          </svg>
+        </div>
+        <div class="contact-card-name">Fernanda Almeida Silva</div>
+        <span class="contact-card-role">Guia de Turismo Brasileira · Coordenadora da Viagem</span>
+        <div class="card-divider"></div>
+
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          +55 11 94772-7979
+        </div>
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Brasil — São Paulo
+        </div>
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+          Atende em Português
+        </div>
+
+        <a href="https://wa.me/5511947727979?text=Ol%C3%A1%20Fernanda!%20Tenho%20interesse%20na%20viagem%20%C3%8Dndia%20Passagem%20Real%20%E2%80%94%20Especial%20Diwali%202026.%20Poderia%20me%20dar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" class="wa-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar Fernanda no WhatsApp
+        </a>
+      </div>
+
+      <!-- MOHIT -->
+      <div class="contact-card">
+        <div class="contact-card-flag-wrap">
+          <!-- India flag SVG -->
+          <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg">
+            <rect width="72" height="16" fill="#FF9933"/>
+            <rect y="16" width="72" height="16" fill="#ffffff"/>
+            <rect y="32" width="72" height="16" fill="#138808"/>
+            <!-- Ashoka Chakra -->
+            <circle cx="36" cy="24" r="6" fill="none" stroke="#000080" stroke-width="1.2"/>
+            <circle cx="36" cy="24" r="1" fill="#000080"/>
+            <!-- 24 spokes -->
+            <g stroke="#000080" stroke-width="0.6">
+              <line x1="36" y1="18" x2="36" y2="30"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(15,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(30,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(45,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(60,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(75,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(90,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(105,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(120,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(135,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(150,36,24)"/>
+              <line x1="36" y1="18" x2="36" y2="30" transform="rotate(165,36,24)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="contact-card-name">Mohit</div>
+        <span class="contact-card-role">Anfitrião & Guia Local Indiano · Coordenador na Índia</span>
+        <div class="card-divider"></div>
+
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          +91 98725 67925
+        </div>
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Índia — Rajastão / Delhi
+        </div>
+        <div class="contact-card-detail">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+          Atende em Inglês & Hindi
+        </div>
+
+        <a href="https://wa.me/919872567925?text=Hello%20Mohit!%20I%20am%20interested%20in%20the%20India%20Royal%20Passage%20%E2%80%94%20Diwali%202026%20trip.%20Could%20you%20please%20share%20more%20information%3F" target="_blank" class="wa-btn">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chamar Mohit no WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <p class="contact-note">✦ &nbsp; Respondemos em até 24 horas &nbsp; ✦</p>
+  </div>
+
+</div>
+
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img
+        src="/logo.png"
+        alt="Roteiros India"
+        class="footer-logo"
+        onerror="this.style.display='none'"
+      >
+      <div class="footer-brand">Roteiros India</div>
+      <p class="footer-tagline">Descubra a Cultura, Viva a Aventura</p>
+      <p class="footer-meta">
+        Índia: Passagem Real · Especial Diwali 2026<br>
+        1 a 10 de Novembro de 2026<br>
+        Máximo 10 Viajantes · R$ 15.500 por pessoa
+      </p>
+    </div>
+    <div class="footer-contacts">
+      <p style="font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);margin-bottom:.6rem;">Contatos</p>
+      <div class="footer-contact-item">
+        <i class="ph ph-flag"></i>
+        Fernanda Almeida Silva
+      </div>
+      <div class="footer-contact-item">
+        <i class="ph ph-phone"></i>
+        +55 11 94772-7979
+      </div>
+      <div class="footer-contact-item" style="margin-top:.5rem;">
+        <i class="ph ph-person-simple-walk"></i>
+        Mohit (Índia)
+      </div>
+      <div class="footer-contact-item">
+        <i class="ph ph-phone"></i>
+        +91 98725 67925
+      </div>
+      <div style="display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/5511947727979" target="_blank" class="wa-btn" style="padding:.5rem 1rem;font-size:.72rem;">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          🇧🇷 BR
+        </a>
+        <a href="https://wa.me/919872567925" target="_blank" class="wa-btn" style="padding:.5rem 1rem;font-size:.72rem;">
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          🇮🇳 IN
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Roteiros India · Todos os direitos reservados</p>
+    <p>🇧🇷 Uma experiência exclusiva para viajantes brasileiros 🇮🇳</p>
+  </div>
+</footer>
+
+<script>
+// Clean scroll reveal — no flashy effects, just a simple fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(
+  '.inc-item, .hotel-card, .why-item, .step-item, .ps, .food-item, .culture-item, .contact-card'
+).forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity .55s ease, transform .55s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
