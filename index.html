@@ -824,7 +824,297 @@ footer {
 }
 </style>
 </head>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup — Roteiros India</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #1A0A00; min-height: 100vh; margin: 0; }
 
+  /* ── POPUP OVERLAY ── */
+  #leadOverlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9999;
+    background: rgba(20, 8, 0, 0.85);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  #leadOverlay.show { display: flex; }
+
+  /* ── MODAL BOX ── */
+  #leadModal {
+    background: #FDF6EC;
+    border-radius: 8px;
+    max-width: 440px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.93); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* ── HEADER ── */
+  .modal-header {
+    background: linear-gradient(135deg, #3D1C00 0%, #7A3A0A 55%, #E8722A 100%);
+    padding: 36px 32px 28px;
+    text-align: center;
+    position: relative;
+  }
+  .modal-header .diya { font-size: 40px; margin-bottom: 10px; display: block; }
+  .modal-header h2 {
+    font-family: Georgia, serif;
+    font-size: 26px; font-weight: 600;
+    color: #fff; margin: 0 0 8px; line-height: 1.2;
+  }
+  .modal-header p { color: rgba(255,255,255,0.72); font-size: 13px; margin: 0; }
+
+  /* ── FORM ── */
+  .modal-body { padding: 30px 32px 28px; }
+  .modal-body .intro {
+    font-size: 14px; color: #7A5C3A;
+    text-align: center; margin: 0 0 22px; line-height: 1.65;
+  }
+  .form-group { margin-bottom: 17px; }
+  .form-group label {
+    display: block;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: #A07040; margin-bottom: 7px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1.5px solid #E8D5BE;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 15px; color: #2C1506;
+    outline: none; box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+  }
+  .form-group input:focus {
+    border-color: #E8722A;
+    box-shadow: 0 0 0 3px rgba(232,114,42,0.14);
+  }
+  .form-group input.error {
+    border-color: #e03e3e;
+    box-shadow: 0 0 0 3px rgba(224,62,62,0.13);
+  }
+  .form-group input::placeholder { color: #C5A98A; }
+
+  /* error message */
+  .error-msg {
+    display: none;
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  .error-msg.show { display: block; }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #E8722A, #C9952A);
+    color: #fff; border: none; border-radius: 4px;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    font-family: inherit; margin-top: 4px;
+  }
+  .submit-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(232,114,42,0.45); }
+  .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; box-shadow: none; }
+  .privacy { text-align: center; font-size: 11px; color: #C5A98A; margin: 13px 0 0; }
+
+  /* ── SUCCESS ── */
+  .modal-success {
+    display: none;
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .modal-success .check { font-size: 52px; margin-bottom: 14px; display: block; }
+  .modal-success h3 {
+    font-family: Georgia, serif;
+    font-size: 26px; font-weight: 600;
+    color: #3D1C00; margin: 0 0 10px;
+  }
+  .modal-success p { font-size: 14px; color: #7A5C3A; margin: 0 0 6px; line-height: 1.65; }
+  .modal-success .countdown { font-size: 13px; color: #E8722A; font-weight: 700; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       PASTE THIS INTO YOUR PAGE
+       ══════════════════════════════════ -->
+
+  <div id="leadOverlay">
+    <div id="leadModal">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <span class="diya">🪔</span>
+        <h2>Ver o Roteiro Completo</h2>
+        <p>Índia · Festival das Luzes · Diwali 2026</p>
+      </div>
+
+      <!-- Form -->
+      <div class="modal-body" id="leadFormSection">
+        <p class="intro">Deixe seu contato para acessar o roteiro completo.<br>Fernanda entrará em contato em até 24h 🇧🇷</p>
+
+        <div class="form-group">
+          <label for="leadNome">Nome</label>
+          <input type="text" id="leadNome" placeholder="Seu nome completo" />
+          <span class="error-msg" id="nomeError">Por favor, insira seu nome completo.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="leadWhatsapp">WhatsApp</label>
+          <input type="tel" id="leadWhatsapp" placeholder="(11) 99999-9999" oninput="formatWhatsapp(this)" maxlength="15" />
+          <span class="error-msg" id="whatsappError">Número inválido. Ex: (11) 99999-9999</span>
+        </div>
+
+        <button class="submit-btn" id="leadSubmitBtn" onclick="submitLead()">Ver Roteiro Completo →</button>
+        <p class="privacy">🔒 Seus dados são confidenciais e não serão compartilhados.</p>
+      </div>
+
+      <!-- Success -->
+      <div class="modal-success" id="leadSuccessSection">
+        <span class="check">✅</span>
+        <h3>Obrigado!</h3>
+        <p>Fernanda entrará em contato pelo WhatsApp em breve. 🇧🇷</p>
+        <p>Abrindo o roteiro completo...</p>
+        <p class="countdown" id="countdownText">em 3 segundos</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // ── AUTO SHOW ON PAGE LOAD ──
+    window.addEventListener('load', function () {
+      document.getElementById('leadOverlay').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // ── FORMAT WHATSAPP AS USER TYPES ──
+    function formatWhatsapp(input) {
+      var v = input.value.replace(/\D/g, ''); // digits only
+      if (v.length <= 2) {
+        input.value = v.length ? '(' + v : '';
+      } else if (v.length <= 6) {
+        input.value = '(' + v.substring(0,2) + ') ' + v.substring(2);
+      } else if (v.length <= 10) {
+        input.value = '(' + v.substring(0,2) + ') ' + v.substring(2,6) + '-' + v.substring(6);
+      } else {
+        input.value = '(' + v.substring(0,2) + ') ' + v.substring(2,7) + '-' + v.substring(7,11);
+      }
+      // Clear error while typing
+      document.getElementById('leadWhatsapp').classList.remove('error');
+      document.getElementById('whatsappError').classList.remove('show');
+    }
+
+    // ── VALIDATE WHATSAPP ──
+    // Valid Brazilian mobile: (XX) 9XXXX-XXXX — 11 digits total, 9th digit must be 9
+    function isValidWhatsapp(value) {
+      var digits = value.replace(/\D/g, '');
+      if (digits.length !== 11) return false;          // must be 11 digits
+      if (digits.substring(0,2) === '00') return false; // invalid DDD
+      if (digits[2] !== '9') return false;              // must start with 9 (mobile)
+      return true;
+    }
+
+    // ── VALIDATE NAME ──
+    function isValidNome(value) {
+      return value.trim().length >= 3;
+    }
+
+    // ── SUBMIT ──
+    function submitLead() {
+      var nome     = document.getElementById('leadNome').value.trim();
+      var whatsapp = document.getElementById('leadWhatsapp').value.trim();
+      var valid    = true;
+
+      // Validate name
+      if (!isValidNome(nome)) {
+        document.getElementById('leadNome').classList.add('error');
+        document.getElementById('nomeError').classList.add('show');
+        valid = false;
+      } else {
+        document.getElementById('leadNome').classList.remove('error');
+        document.getElementById('nomeError').classList.remove('show');
+      }
+
+      // Validate WhatsApp
+      if (!isValidWhatsapp(whatsapp)) {
+        document.getElementById('leadWhatsapp').classList.add('error');
+        document.getElementById('whatsappError').classList.add('show');
+        valid = false;
+      } else {
+        document.getElementById('leadWhatsapp').classList.remove('error');
+        document.getElementById('whatsappError').classList.remove('show');
+      }
+
+      if (!valid) return;
+
+      // Disable button
+      var btn = document.getElementById('leadSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      // Send via mailto
+      var subject = encodeURIComponent('Novo Lead — Roteiro India Diwali 2026');
+      var body    = encodeURIComponent(
+        'Novo lead pelo site Roteiros India:\n\n' +
+        'Nome: ' + nome + '\n' +
+        'WhatsApp: ' + whatsapp + '\n\n' +
+        'Interessado em: Índia Festival das Luzes · Diwali 2026'
+      );
+      window.location.href = 'mailto:fernanda@1point.com.br?subject=' + subject + '&body=' + body;
+
+      // Show success + countdown then auto-close
+      setTimeout(function () {
+        document.getElementById('leadFormSection').style.display = 'none';
+        document.getElementById('leadSuccessSection').style.display = 'block';
+        startCountdown();
+      }, 800);
+    }
+
+    // ── COUNTDOWN + AUTO CLOSE ──
+    function startCountdown() {
+      var count = 3;
+      var el    = document.getElementById('countdownText');
+      var timer = setInterval(function () {
+        count--;
+        if (count > 0) {
+          el.textContent = 'em ' + count + (count === 1 ? ' segundo' : ' segundos');
+        } else {
+          clearInterval(timer);
+          closeAndShow();
+        }
+      }, 1000);
+    }
+
+    function closeAndShow() {
+      document.getElementById('leadOverlay').classList.remove('show');
+      document.body.style.overflow = '';
+      // If your page content is wrapped in a hidden div, reveal it here:
+      // document.getElementById('mainContent').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
 <body>
 
 <!-- ═══════════════════════════════════════
