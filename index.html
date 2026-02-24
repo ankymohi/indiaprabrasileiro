@@ -361,19 +361,38 @@ p             { color:var(--muted); font-size:.98rem; line-height:1.85; }
 .ps4 { grid-column:2; grid-row:2; }
 .ps5 { grid-column:3; grid-row:2; }
 
-/* ══════════════════════════════════════════
-   HOTELS
-══════════════════════════════════════════ */
-.hotel-grid {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem;
-}
-.hotel-card { border:1px solid var(--border); border-radius:2px; overflow:hidden; transition:border-color .25s; }
-.hotel-card:hover { border-color:rgba(201,147,10,.5); }
-.hotel-card img { width:100%; height:190px; object-fit:cover; }
-.hotel-info { padding:1.3rem; }
-.hotel-info .stars { color:var(--gold2); font-size:.75rem; margin-bottom:.4rem; }
-.hotel-info h4 { font-family:'Jost',sans-serif; font-size:.88rem; font-weight:700; color:var(--cream); margin-bottom:.3rem; }
+/* ── HOTELS ── */
+.hotel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.5rem; }
+
+.hotel-card { border:1px solid var(--border); border-radius:2px; overflow:hidden; transition:border-color .3s, box-shadow .3s; background:var(--ink2); }
+.hotel-card:hover { border-color:rgba(201,147,10,.55); box-shadow:0 8px 36px rgba(0,0,0,.45); }
+
+.hotel-photos { position:relative; overflow:hidden; }
+.hotel-photo-track { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; cursor:grab; user-select:none; }
+.hotel-photo-track::-webkit-scrollbar { display:none; }
+.hotel-photo-track.is-dragging { cursor:grabbing; }
+.hotel-photo-slide { flex:0 0 100%; scroll-snap-align:start; }
+.hotel-photo-slide img { width:100%; height:210px; object-fit:cover; display:block; pointer-events:none; }
+
+.hotel-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:3; width:32px; height:32px; border-radius:50%; background:rgba(12,7,0,.72); border:1px solid rgba(201,147,10,.35); color:var(--gold2); font-size:.9rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .2s; backdrop-filter:blur(4px); }
+.hotel-arrow:hover { background:rgba(201,147,10,.4); }
+.hotel-arrow.prev { left:.6rem; }
+.hotel-arrow.next { right:.6rem; }
+
+.hotel-dots { position:absolute; bottom:.6rem; left:50%; transform:translateX(-50%); display:flex; gap:.4rem; z-index:3; }
+.hotel-dot { width:6px; height:6px; border-radius:50%; background:rgba(245,237,216,.3); transition:background .25s, transform .25s; cursor:pointer; }
+.hotel-dot.active { background:var(--gold2); transform:scale(1.3); }
+
+.hotel-photo-count { position:absolute; top:.6rem; right:.6rem; z-index:3; background:rgba(12,7,0,.75); border:1px solid rgba(201,147,10,.3); border-radius:100px; padding:.18rem .6rem; font-family:'Jost',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.08em; color:var(--gold2); backdrop-filter:blur(4px); }
+
+.hotel-info { padding:1.3rem 1.4rem 1.5rem; }
+.hotel-info .stars { color:var(--gold2); font-size:.75rem; margin-bottom:.4rem; letter-spacing:.1em; }
+.hotel-info h4 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:700; color:var(--cream); margin-bottom:.4rem; }
 .hotel-info p { font-size:.83rem; }
+.hotel-amenities { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.9rem; }
+.hotel-amenity { font-family:'Jost',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.22rem .65rem; border-radius:100px; background:rgba(201,147,10,.08); border:1px solid rgba(201,147,10,.22); color:var(--gold2); }
+
+@media(max-width:860px){ .hotel-grid { grid-template-columns:1fr; } }
 
 /* ══════════════════════════════════════════
    ITINERARY — each day = full-width bg section
@@ -834,9 +853,9 @@ body.gate-active #page-content { filter: blur(6px) brightness(.3); pointer-event
 
 #lead-gate {
   position: fixed; inset: 0; z-index: 99999;
-  display: flex; align-items: center; justify-content: center;
+  display: none; /* ← changed from flex */
+  align-items: center; justify-content: center;
   padding: 1rem;
-  
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   animation: gateIn .5s ease;
 }
@@ -1021,7 +1040,14 @@ body.gate-active #page-content { filter: blur(6px) brightness(.3); pointer-event
   const FORM_URL = 'https://formsubmit.co/' + TO_EMAIL;
 
   // Lock body on load
+  // Show gate after 1 minute
+function showGate() {
+  const gate = document.getElementById('lead-gate');
+  gate.style.display = 'flex';
+  gate.style.animation = 'gateIn .5s ease forwards';
   document.body.classList.add('gate-active');
+}
+setTimeout(showGate, 60000);
   document.addEventListener('keydown', e => {
     if (document.body.classList.contains('gate-active') && e.key === 'Escape') e.preventDefault();
   });
@@ -1444,35 +1470,98 @@ body.gate-active #page-content { filter: blur(6px) brightness(.3); pointer-event
   <h2>Hotéis 4 Estrelas Selecionados</h2>
   <p style="max-width:620px;margin-top:.8rem;">Acomodações confortáveis e verificadas. Quartos compartilhados — 2 viajantes por quarto. Café da manhã incluso diariamente. Propriedades seguras e centrais.</p>
 
-  <div class="hotel-grid">
-    <div class="hotel-card">
-      <!-- Replace with your Delhi hotel photo -->
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/39/3c/ee/the-park-new-delhi.jpg?w=1200&h=-1&s=1" alt="Delhi Hotel">
-      <div class="hotel-info">
-        <div class="stars">★★★★</div>
-        <h4>🏙️ Nova Delhi</h4>
-        <p>Hotel central, seguro e confortável. Café da manhã diário incluso. Propriedade verificada.</p>
+ <div class="hotel-grid">
+
+  <!-- DELHI -->
+  <div class="hotel-card">
+    <div class="hotel-photos">
+      <div class="hotel-photo-track">
+        <div class="hotel-photo-slide"><img src="/112.jpeg" alt="Delhi Hotel Lobby"></div>
+        <div class="hotel-photo-slide"><img src="/111.jpeg" alt="Delhi Hotel Room"></div>
+        <div class="hotel-photo-slide"><img src="/113.jpeg" alt="Delhi Hotel Pool"></div>
+        <div class="hotel-photo-slide"><img src="/100.jpeg" alt="Delhi Hotel Restaurant"></div>
       </div>
-    </div>
-    <div class="hotel-card">
-      <!-- Replace with your Agra hotel photo -->
-      <img src="https://www.holidify.com/images/cmsuploads/compressed/34648580_20220223165312.jpg" alt="Agra Hotel">
-      <div class="hotel-info">
-        <div class="stars">★★★★</div>
-        <h4>🕌 Agra</h4>
-        <p>Próximo ao Taj Mahal. Café da manhã diário incluso. Localização central.</p>
+      <button class="hotel-arrow prev">‹</button>
+      <button class="hotel-arrow next">›</button>
+      <div class="hotel-dots">
+        <div class="hotel-dot active"></div><div class="hotel-dot"></div><div class="hotel-dot"></div><div class="hotel-dot"></div>
       </div>
+      <span class="hotel-photo-count">1 / 4</span>
     </div>
-    <div class="hotel-card">
-      <!-- Replace with your Jaipur hotel photo -->
-      <img src="https://images.unsplash.com/photo-1627442433449-317a17fb6211?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jaipur Hotel">
-      <div class="hotel-info">
-        <div class="stars">★★★★</div>
-        <h4>🏯 Jaipur</h4>
-        <p>Na Cidade Rosa. Café da manhã diário incluso. Ambiente rajastanês autêntico.</p>
+    <div class="hotel-info">
+      <div class="stars">★★★★</div>
+      <h4>🏙️ Nova Delhi</h4>
+      <p>1. Hotel Banz Near Indira Gandhi Airport 
+A-137 ROAD NO 4, Mahipalpur Extension, Mahipalpur, New Delhi</p>
+      <div class="hotel-amenities">
+        <span class="hotel-amenity">☕ Café da Manhã</span>
+        <span class="hotel-amenity">❄️ AC</span>
+        <span class="hotel-amenity">🔒 Seguro</span>
+        <span class="hotel-amenity">🛜 Wi-Fi</span>
       </div>
     </div>
   </div>
+
+  <!-- AGRA -->
+  <div class="hotel-card">
+    <div class="hotel-photos">
+      <div class="hotel-photo-track">
+        <div class="hotel-photo-slide"><img src="/331.jpeg" alt="Agra Hotel Exterior"></div>
+        <div class="hotel-photo-slide"><img src="/332.jpeg" alt="Agra Hotel Room"></div>
+        <div class="hotel-photo-slide"><img src="/333.jpeg" alt="Agra Hotel Pool"></div>
+        <div class="hotel-photo-slide"><img src="/334.jpeg" alt="Agra Hotel Dining"></div>
+      </div>
+      <button class="hotel-arrow prev">‹</button>
+      <button class="hotel-arrow next">›</button>
+      <div class="hotel-dots">
+        <div class="hotel-dot active"></div><div class="hotel-dot"></div><div class="hotel-dot"></div><div class="hotel-dot"></div>
+      </div>
+      <span class="hotel-photo-count">1 / 4</span>
+    </div>
+    <div class="hotel-info">
+      <div class="stars">★★★★</div>
+      <h4>🕌 Agra</h4>
+      <p>2. HOTEL TEN SQUARE - 5
+Minutes from The Taj Mahal Hig-8, Taj Nagari Phase-1, Fatehabad Road, Behind Taj Hotel & Convention Centre,, Agra.</p>
+      <div class="hotel-amenities">
+        <span class="hotel-amenity">☕ Café da Manhã</span>
+        <span class="hotel-amenity">🕌 Vista Taj</span>
+        <span class="hotel-amenity">❄️ AC</span>
+        <span class="hotel-amenity">🛜 Wi-Fi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAIPUR -->
+  <div class="hotel-card">
+    <div class="hotel-photos">
+      <div class="hotel-photo-track">
+        <div class="hotel-photo-slide"><img src="/442.jpeg" alt="Jaipur Hotel Exterior"></div>
+        <div class="hotel-photo-slide"><img src="/441.jpeg" alt="Jaipur Hotel Room"></div>
+        <div class="hotel-photo-slide"><img src="/443.jpeg" alt="Jaipur Hotel Pool"></div>
+        <div class="hotel-photo-slide"><img src="/444.jpeg" alt="Jaipur Hotel Courtyard"></div>
+      </div>
+      <button class="hotel-arrow prev">‹</button>
+      <button class="hotel-arrow next">›</button>
+      <div class="hotel-dots">
+        <div class="hotel-dot active"></div><div class="hotel-dot"></div><div class="hotel-dot"></div><div class="hotel-dot"></div>
+      </div>
+      <span class="hotel-photo-count">1 / 4</span>
+    </div>
+    <div class="hotel-info">
+      <div class="stars">★★★</div>
+      <h4>🏯 Jaipur</h4>
+      <p>hotel taj new.</p>
+      <div class="hotel-amenities">
+        <span class="hotel-amenity">☕ Café da Manhã</span>
+        <span class="hotel-amenity">🏯 Estilo Real</span>
+        <span class="hotel-amenity">❄️ AC</span>
+        <span class="hotel-amenity">🛜 Wi-Fi</span>
+      </div>
+    </div>
+  </div>
+
+</div>
 </section>
 
 
@@ -2885,6 +2974,36 @@ Minha missão nesta expedição é garantir que você não seja apenas um visita
 </footer>
 
 <script>
+    // ── HOTEL CAROUSELS ──
+document.querySelectorAll('.hotel-card').forEach(card => {
+  const track  = card.querySelector('.hotel-photo-track');
+  const slides = card.querySelectorAll('.hotel-photo-slide');
+  const dots   = card.querySelectorAll('.hotel-dot');
+  const counter= card.querySelector('.hotel-photo-count');
+  const total  = slides.length;
+  let current  = 0;
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.scrollTo({ left: current * track.clientWidth, behavior:'smooth' });
+    dots.forEach((d,i) => d.classList.toggle('active', i === current));
+    if (counter) counter.textContent = `${current+1} / ${total}`;
+  }
+
+  card.querySelector('.hotel-arrow.prev').addEventListener('click', e => { e.stopPropagation(); goTo(current-1); });
+  card.querySelector('.hotel-arrow.next').addEventListener('click', e => { e.stopPropagation(); goTo(current+1); });
+  dots.forEach((dot,i) => dot.addEventListener('click', () => goTo(i)));
+
+  let startX=0, scrollStart=0, dragging=false;
+  track.addEventListener('mousedown', e => { dragging=true; startX=e.pageX; scrollStart=track.scrollLeft; track.classList.add('is-dragging'); });
+  track.addEventListener('mousemove', e => { if(!dragging) return; track.scrollLeft = scrollStart-(e.pageX-startX); });
+  track.addEventListener('mouseup',   () => { dragging=false; track.classList.remove('is-dragging'); });
+  track.addEventListener('mouseleave',() => { dragging=false; track.classList.remove('is-dragging'); });
+
+  let touchStartX=0;
+  track.addEventListener('touchstart', e => { touchStartX=e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend',   e => { const diff=touchStartX-e.changedTouches[0].clientX; if(Math.abs(diff)>40) goTo(diff>0?current+1:current-1); });
+});
 // Clean scroll reveal — no flashy effects, just a simple fade-in
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
